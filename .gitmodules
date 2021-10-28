@@ -1,0 +1,3 @@
+[submodule "nuxhash/nhrest"]
+	path = nuxhash/nhrest
+	url = https://github.com/nicehash/rest-clients-demo.git

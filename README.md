@@ -11,7 +11,7 @@ Donations: bc1q2ne5zqa6k5egd82p4rv0rn44tpc35gv3afu52n
 - Miner downloader
 - Profit-switching
 - Nvidia graphics cards
-- NiceHash's proprietary [excavator](https://github.com/nicehash/excavator) miner
+- Proprietary [nbminer](https://github.com/NebuTech/NBMiner) miner
 - Command-line and (optional) GUI interfaces
 
 ![GUI screenshot](https://raw.githubusercontent.com/wiki/YoRyan/nuxhash/gui_alpha.png)
@@ -20,7 +20,7 @@ Donations: bc1q2ne5zqa6k5egd82p4rv0rn44tpc35gv3afu52n
 nuxhashd initial setup
 Wallet address: 3DJBpNcgP3Pihw45p9544PK6TbbYeMcnk7
 Worker name: nuxhash
-Region (eu/usa/hk/jp/in/br): usa
+Region (eu-north/eu-west/usa-east/usa-west): usa-west
 
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed

@@ -13,7 +13,7 @@ DEFAULT_SETTINGS = {
     'nicehash': {
         'wallet': '',
         'workername': 'nuxhash',
-        'region': 'usa',
+        'region': 'usa-west',
         'api_organization': '',
         'api_key': '',
         'api_secret': ''
@@ -28,9 +28,13 @@ DEFAULT_SETTINGS = {
     'donate': {
         'optout': False
         },
-    'excavator_miner': {
+    # 'excavator_miner': {
+    #     'listen': '',
+    #     'args': ''
+    #     },
+    'nbminer_miner': {
         'listen': '',
-        'args': ''
+        'args': '--tl 75 --ts 70 --no-watchdog -lhr 65'
         }
     }
 EMPTY_BENCHMARKS = defaultdict(lambda: {})
@@ -58,7 +62,11 @@ def read_settings_from_file(fd):
         'donate': {
             'optout': parser.getboolean
             },
-        'excavator_miner': {
+        # 'excavator_miner': {
+        #     'listen': parser.get,
+        #     'args': parser.get
+        #     },
+        'nbminer_miner': {
             'listen': parser.get,
             'args': parser.get
             }

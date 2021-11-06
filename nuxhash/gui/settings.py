@@ -11,7 +11,7 @@ from nuxhash.gui import main
 from nuxhash.settings import DEFAULT_SETTINGS
 
 
-REGIONS = ['eu', 'usa', 'jp', 'hk']
+REGIONS = ['eu-north', 'eu-west', 'usa-east', 'usa-west']
 UNITS = ['BTC', 'mBTC']
 INVALID_COLOR = 'PINK'
 

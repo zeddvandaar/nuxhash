@@ -138,8 +138,8 @@ def initial_setup():
         workername = 'nuxhash'
 
     region = ''
-    while region not in ['eu', 'usa', 'hk', 'jp', 'in', 'br']:
-        region = input('Region (eu/usa/hk/jp/in/br): ')
+    while region not in ['eu-north', 'eu-west', 'usa-east', 'usa-west']:
+        region = input('Region (eu-north/eu-west/usa-east/usa-west)')
 
     print()
     return wallet, workername, region
@@ -151,7 +151,18 @@ def run_missing_benchmarks(miners, settings, devices, old_benchmarks):
     log_level = logger.getEffectiveLevel()
     logger.setLevel(logging.ERROR)
 
+    # Initialize miners.
+    logging.info('Querying NiceHash for miner connection information...')
+    stratums = None
+    while stratums is None:
+        try:
+            stratums = nicehash.stratums(settings)
+        except Exception as err:
+            logging.warning(f'NiceHash stats: {err}, retrying in 5 seconds')
+            time.sleep(5)
+
     for miner in miners:
+        miner.stratums = stratums
         miner.load()
 
     algorithms = sum([miner.algorithms for miner in miners], [])
